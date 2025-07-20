@@ -1,127 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn to trade smartly with our expert trading courses and eBooks. Get instant access to proven strategies, real-world case studies, and more.">
+    <meta name="keywords" content="Trading Courses, Learn Trading, Forex Course, Stock Market eBooks, Price Action, Technical Analysis, Beginner Trading, Buy Trading Course, Download Trading PDF">
+    <meta property="og:title" content="BEGINNER TRADER HELPER - eBooks and Courses">
+    <meta property="og:description" content="Explore and download expert-made trading eBooks and video courses. Start your profitable trading journey today!">
+    <meta property="og:image" content="https://beginnertrader.store/images/og-image.jpg">
+    <meta property="og:url" content="https://beginnertrader.store">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>BEGINNER TRADER HELPER - Trading Courses & eBooks</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #343a40;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #007bff;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/g2yLmTQx/photo-1737301214226-3f959016436f.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Courses & eBooks Section */
+        .products {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-info p {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        
+        .footer-logo p {
+            color: #adb5bd;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #adb5bd;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .animate {
+            animation: zoomIn 0.5s ease forwards;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                margin-bottom: 10px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .products-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>BEGINNER TRADER HELPER</h1>
+                <p>Learn Smart. Trade Smarter.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#ebooks">eBooks</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- ✅ HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-overlay">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Master the Market</h1>
+        <h2 class="hero-sub">With Expert Trading Courses</h2>
+        <p class="hero-tagline">
+          Your struggle is just a consolidation — wait for a strong breakout.
+        </p>
+        <div class="hero-buttons">
+          <a href="#courses" class="btn">Explore Courses</a>
+          <a href="#ebooks" class="btn btn-secondary">Explore eBooks</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ✅ HERO SECTION CSS */
+.hero {
+  background: linear-gradient(to bottom, rgba(15, 15, 15, 0.3), rgba(10, 10, 10, 0.6)),
+              url('https://i.postimg.cc/g2yLmTQx/photo-1737301214226-3f959016436f.jpg') no-repeat center center/cover;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero-overlay {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-sub {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  color: #eaeaea;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e68900;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e5e5;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-sub {
+    font-size: 1.3rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+</style>
+
+
+<!-- Courses Section -->
+<section class="products" id="courses">
+    <div class="container">
+        <h2 class="section-title">Premium Trading Courses</h2>
+        <p class="section-subtitle">Learn from market experts with our comprehensive video courses</p>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://i.postimg.cc/q72LZwhc/2.jpg">
+                        <source media="(min-width: 769px)" srcset="https://i.postimg.cc/q72LZwhc/2.jpg">
+                        <img src="https://i.postimg.cc/q72LZwhc/2.jpg" loading="lazy" alt="Technical Analysis Course Cover" onclick="openGallery(['https://i.postimg.cc/h4rRJbG5/Untitled-design.png', 'https://i.postimg.cc/027n2x0G/downside-setup-bth-v4-1.png', 'https://i.postimg.cc/nhRDnwgY/UPSIDE-TRADE-BTH.png'])">
+                    </picture>
+                </div>
+                <div class="product-info">
+                    <h3>BTH ALGO V4.2 + 4 IN 1 E-BOOK BUNDLE ( Basics Version )</h3>
+                    <p>Learn to read charts like a pro with this comprehensive technical analysis course.</p>
+                    <div class="product-price">₹ 599</div>
+                    <a href="https://superprofile.bio/vp/6438454049f50000204a22c4" class="enroll-button" target="_blank">Enroll Now</a>
+                    <a href="#" class="sample-button" onclick="openGallery(['https://i.postimg.cc/h4rRJbG5/Untitled-design.png', 'https://i.postimg.cc/027n2x0G/downside-setup-bth-v4-1.png', 'https://i.postimg.cc/nhRDnwgY/UPSIDE-TRADE-BTH.png'])">View Sample</a>
+                    <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+                    <div class="faq-answer">FAQ : <strong>What is BTH 4.2 (Basics Version)?</strong><br>
+                    BTH 4.2 Basics Version is an introductory trading bundle that includes:<br>
+                    ✅ Premium eBooks on Price Action & SMC<br>
+                    ✅ Free Indicator access for chart analysis<br>
+                    ❌ Note: Video tutorials are not included in this version<br>
+                    It is designed for traders who prefer reading material and hands-on practice.</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://i.postimg.cc/9Q5PNs2z/Picsart-25-02-08-23-37-37-002.jpg">
+                        <source media="(min-width: 769px)" srcset="https://i.postimg.cc/9Q5PNs2z/Picsart-25-02-08-23-37-37-002.jpg">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" loading="lazy" alt="Price Action Trading Course Cover" onclick="openGallery(['https://i.postimg.cc/zvNbkYK1/Screenshot-2025-02-08-212051.png', 'https://i.postimg.cc/DZv3QC0M/Screenshot-2025-03-28-005249.png', 'https://i.postimg.cc/SRj03JWL/Screenshot-2025-03-28-004941.png'])">
+                    </picture>
+                </div>
+                <div class="product-info">
+                    <h3>Price Action Trading</h3>
+                    <p>Master price action strategies used by institutional traders worldwide.</p>
+                    <div class="product-price">₹ 1899  ( Limited Time )</div>
+                    <a href="https://superprofile.bio/course/beginnertraderhelper" class="enroll-button" target="_blank">Enroll Now</a>
+                    <a href="#" class="sample-button" onclick="openGallery(['https://i.postimg.cc/zvNbkYK1/Screenshot-2025-02-08-212051.png', 'https://i.postimg.cc/DZv3QC0M/Screenshot-2025-03-28-005249.png', 'https://i.postimg.cc/SRj03JWL/Screenshot-2025-03-28-004941.png'])">View Sample</a>
+                    <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+                    <div class="faq-answer">FAQ : <strong>What is BTH 4.3 (Advanced Version)?</strong><br>
+                    BTH 4.3 Advanced Version is a complete trading solution that includes:<br>
+                    ✅ EBooks covering advanced Price Action & SMC concepts<br>
+                    ✅ Updated Trading Indicator for better accuracy<br>
+                    ✅ Full Video Tutorials for easy understanding<br>
+                    ✅ Dedicated Customer Support for guidance<br>
+                    Perfect for traders who want structured learning with hands-on support.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popup Gallery Modal -->
+<div id="imageModal" class="modal" onclick="closeGallery()">
+    <span class="close">&times;</span>
+    <div class="modal-content" id="modal-images"></div>
+</div>
+
+<style>
+.enroll-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.enroll-button:hover {
+    background-color: #d62828;
+}
+
+.sample-button {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.sample-button:hover {
+    background-color: #21867a;
+}
+
+.faq-toggle {
+    display: block;
+    margin-top: 10px;
+    background-color: #457b9d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    margin: auto;
+}
+.modal-content img {
+    max-height: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+<script>
+function openGallery(images) {
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.getElementById('modal-images');
+    modalContent.innerHTML = images.map(src => `<img src="${src}" alt="Course Preview">`).join('');
+    modal.style.display = 'block';
+}
+function closeGallery() {
+    document.getElementById('imageModal').style.display = 'none';
+}
+function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+
+<!-- eBooks Section -->
+<section class="products" id="ebooks">
+  <div class="container">
+    <h2 class="section-title">Premium Trading eBooks</h2>
+    <p class="section-subtitle">Download instantly and start learning today</p>
+
+    <div class="products-grid">
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/XYFYvDTM/Picsart-24-11-17-14-19-23-695.png" loading="lazy" alt="Candlestick Patterns eBook">
+        </div>
+        <div class="product-info">
+          <h3>SMC LIQUIDITY STRATEGY (BASICS TO ADVANCED)</h3>
+
+          <div class="product-price">₹239</div>
+          <a href="https://superprofile.bio/vp/smc-liquidity-strategy---basics-to-advanced--" class="enroll-button" target="_blank">Enroll Now</a>
+          <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+          <div class="faq-answer">
+            ✅ Basics: Market Structure, BOS, Liquidity, Trends, Orderblocks, FVGs, Daily Bias, OTE, SL Placement, PO3, MNO, BBs<br>
+            ✅ Strategies: OB Entries, Liquidity Sweep (LQ SW), SS BOX, MMXMs<br>
+            ✅ Must Know: Trading Day Setup, Risk-Reward (RR), Calculators, Correlations, Trading Plan<br>
+            📄 189 Pages | PDF | Instant Download<br>
+            💬 24/7 Support | 🔁 Free Updates<br>
+            ⚠️ Not Financial Advice
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/tRzjBnxx/1697987533129.jpg" loading="lazy" alt="Price Action eBook">
+        </div>
+        <div class="product-info">
+          <h3>PRICE ACTION PATTERNS 3.0 + OPTION STRATEGY PART -2</h3>
+
+          <div class="product-price">₹249</div>
+          <a href="https://superprofile.bio/vp/price-action-patterns-3-0---option-strategy-part--2" class="enroll-button" target="_blank">Enroll Now</a>
+          <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+          <div class="faq-answer">
+            📖 Pages 130+<br>
+            1. Introduction to Option Strategy Part 2<br>
+            2. Uptrend Strategy in Detail<br>
+            3. Downtrend Strategy in Detail<br>
+            4. FIBO Advanced Strategy for All Levels<br>
+            5. Price Action 3.0 + Strategy Testing Tools
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/xTdWgxQw/1681038316.png" loading="lazy" alt="Options eBook">
+        </div>
+        <div class="product-info">
+          <h3>OPTION STRATEGY FOR BEGINNERS (ADVANCED VERSION) PART 1</h3>
+
+          <div class="product-price">₹219</div>
+          <a href="https://superprofile.bio/vp/option-strategy-for-beginners--advanced-version--part-1" class="enroll-button" target="_blank">Enroll Now</a>
+          <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+          <div class="faq-answer">
+            🗂 75+ Pages | Hindi + English (2 in 1)<br>
+            1. Market Overview<br>
+            2. Strike Price Selection (ATM, OTM, ITM)<br>
+            3. Trading Setup & Psychology<br>
+            4. Seller Mindset Breakdown<br>
+            5. Trap Concepts (S&R)<br>
+            6. Pattern Trade Setup<br>
+            📥 Instant Google Drive Download After Payment
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/hP6cmWmy/PRICE-ACTION.png" loading="lazy" alt="New Strategy eBook">
+        </div>
+        <div class="product-info">
+          <h3>PRICE ACTION PATTERN 2.0 ( ENGLISH AND HIINDI VERSION)</h3>
+
+          <div class="product-price">₹169</div>
+          <a href="https://superprofile.bio/vp/price-action-pattern-2-0---english-and-hiindi-version-" class="enroll-button" target="_blank">Enroll Now</a>
+          <button class="faq-toggle" onclick="toggleFAQ(this)">FAQ</button>
+          <div class="faq-answer">
+            🗂 75+ Pages | Hindi + English (2 in 1)<br>
+            📊 Chart Patterns + Price Action for Stocks, Forex, Crypto<br>
+            📍 Entry/Exit Strategy with Examples<br>
+            📥 Instant Google Drive Download After Payment
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Merged Subscriber Counter Section -->
+<section class="products" style="background-color: #f8f9fa; padding: 80px 0;">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center; font-size: 28px; color: #333; margin-bottom: 10px;">Our Community Reach</h2>
+    <p class="section-subtitle" style="text-align:center; font-size: 18px; color: #666; margin-bottom: 40px;">Trusted by thousands of traders across platforms</p>
+
+    <div class="counter-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #fff; padding: 40px 30px; border-radius: 20px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); max-width: 800px; margin: auto;">
+      <div class="counter-box" style="display: flex; flex-direction: column; align-items: center; flex: 1 1 200px; min-width: 150px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <div class="counter-label" style="font-size: 16px; color: #444; margin-bottom: 6px;">YouTube Subscribers</div>
+        <div id="yt-subs" class="counter-number" style="font-size: 32px; font-weight: 700; color: #e53935;">0</div>
+      </div>
+
+      <div class="counter-box" style="display: flex; flex-direction: column; align-items: center; flex: 1 1 200px; min-width: 150px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <div class="counter-label" style="font-size: 16px; color: #444; margin-bottom: 6px;">Instagram Followers</div>
+        <div id="insta-follows" class="counter-number" style="font-size: 32px; font-weight: 700; color: #e53935;">0</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function animateCount(id, target, duration) {
+    const element = document.getElementById(id);
+    let start = 0;
+    const step = Math.ceil(target / (duration / 20));
+
+    const counter = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        element.textContent = target.toLocaleString() + (id === 'yt-subs' ? '+' : '');
+        clearInterval(counter);
+      } else {
+        element.textContent = start.toLocaleString();
+      }
+    }, 20);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    animateCount('yt-subs', 392000, 1500);
+    animateCount('insta-follows', 122000, 1500);
+  });
+</script>
+
+<style>
+  @media screen and (max-width: 768px) {
+    .counter-container {
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+    .counter-box img {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .counter-number {
+      font-size: 28px !important;
+    }
+    .section-title {
+      font-size: 24px !important;
+    }
+    .section-subtitle {
+      font-size: 16px !important;
+    }
+  }
+</style>
+
+
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Our Experts</h2>
+        <p class="section-subtitle">Learn from traders with real market experience</p>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://i.postimg.cc/zv5wGcz0/White-Gray-Minimalist-Call-To-Action-Instagram-Post.png" loading="lazy" alt="Trading Instructor Profile">
+            </div>
+            <div class="about-text">
+                <h3>Professional Experience That Matters</h3>
+                <p>With over <strong>5 years of hands-on experience</strong> in the trading industry, I’ve navigated and mastered diverse markets including the <strong>Indian Stock Market, Forex, and Cryptocurrency</strong>. My journey has been built on deep market analysis, strategic execution, and consistent learning.</p>
+                <p>I’ve had the privilege of mentoring <strong>more than 5,000 students</strong>, helping them build confidence and clarity in trading. Every concept I teach is rooted in real-world experience and delivered with step-by-step guidance, ensuring even beginners can understand and apply advanced strategies.</p>
+                <p>Whether it's <strong>Smart Money Concepts (SMC)</strong>, <strong>Price Action</strong>, or <strong>Options Hedging</strong>, my goal is simple:<br>
+                <em>To make complex trading simplified and profitable—for everyone.</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Students Say</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>Ravi S.</h4>
+                        <div class="stars" style="color:gold">★★★★★</div>
+                    </div>
+                </div>
+                <p>"After completing the <strong>SMC Liquidity Strategy (Basics to Advanced)</strong> course, my entries have become more accurate and my losses are minimized. A must for serious traders!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>Neha M.</h4>
+                        <div class="stars" style="color:gold">★★★★★</div>
+                    </div>
+                </div>
+                <p>"I was new to trading and very confused. The <strong>Option Strategy for Beginners - Advanced Version</strong> gave me clear direction and step-by-step strategies that actually work. Highly recommend!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>Arjun R.</h4>
+                        <div class="stars" style="color:gold">★★★★☆</div>
+                    </div>
+                </div>
+                <p>"Loved the <strong>Price Action Pattern 3.0 + Option Strategy Part -2</strong> course! I now know when to hedge and how to read market sentiment better. Practical and beginner-friendly content."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>Sneha T.</h4>
+                        <div class="stars" style="color:gold">★★★★★</div>
+                    </div>
+                </div>
+                <p>"The <strong>BTH V4.2 + 4 in 1 eBook Bundle</strong> helped me understand scalping setups in a way no other course did. Highly structured and easy to implement."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-author">
+                        <h4>Amit K.</h4>
+                        <div class="stars" style="color:gold">★★★★☆</div>
+                    </div>
+                </div>
+                <p>"Clear, concise and impactful. <strong>The Ultimate Options Trading & Algo Strategy Course</strong> helped me sharpen my execution and risk control. Would’ve given 5 stars if it had more live examples."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Beginner Trader Helper™ – Smart trading tools, premium eBooks, and advanced indicators to level up your trading journey."/>
-  <meta name="keywords" content="SMC Trading, Algo, Trading eBooks, Beginner Trader Helper, Price Action"/>
-  <meta name="author" content="Beginner Trader Helper"/>
-  <meta property="og:title" content="Beginner Trader Helper™ | Official Website" />
-  <meta property="og:description" content="Get access to eBooks, indicators & expert support – trusted by 20,000+ traders." />
-  <meta property="og:url" content="https://beginnertrader.store" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://beginnertrader.store/cover.jpg" />
-  <title>Beginner Trader Helper™ | Official Website</title>
+  <title>Beginner Trader Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 0;
-      color: #111;
+      margin: 0; font-family: 'Segoe UI', sans-serif; background: #f4f4f4;
     }
-    header {
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: auto; padding: 20px; }
+
+    footer {
+      background: #111; color: #fff;
+      padding: 40px 20px 20px;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-logo h2 {
+      margin: 0 0 10px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 22px;
+      margin-right: 12px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00ffcc;
+    }
+
+    .footer-links ul {
+      list-style: none; padding: 0;
+    }
+    .footer-links li {
+      margin: 10px 0;
+    }
+
+    .footer-note, .copyright {
+      margin-top: 30px; font-size: 13px;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      overflow: auto;
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 600px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .modal-content h2 {
+      margin-top: 0;
+    }
+    .close {
+      color: #333;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #fff;
+      padding: 60px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #666;
+    }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .contact-form {
+      flex: 1;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    input, textarea {
+      width: 100%; padding: 10px;
+      border: 1px solid #ccc; border-radius: 4px;
+    }
+    .btn {
+      padding: 10px 20px;
       background: #000;
       color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 {
-      font-size: 2.5em;
-    }
-    .btn-main {
-      background: #ff6a00;
-      padding: 12px 30px;
-      color: #fff;
-      font-weight: bold;
       border: none;
-      border-radius: 5px;
-      font-size: 1.1em;
       cursor: pointer;
-      text-decoration: none;
+      border-radius: 4px;
     }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+    .btn:hover {
+      background: #444;
     }
-    .features {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      font-size: 1.1em;
-    }
-    .feature {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #00a86b;
-      border-radius: 8px;
-    }
-    .products {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .products img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .note {
-      background: #fff3cd;
-      border-left: 6px solid #ffcc00;
-      padding: 20px;
-      margin-top: 40px;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      font-size: 0.9em;
-    }
-    a.social {
-      display: inline-block;
-      margin: 10px;
-      color: #0073e6;
-      font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      .footer-container, .contact-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Beginner Trader Helper™</h1>
-    <p>Master trading from scratch with our SMC + Price Action eBooks & tools</p>
-    <a href="https://cosmofeed.com/bth" class="btn-main">Explore Now</a>
-  </header>
+ 
+<!-- ⚠️ Official Website Notice -->
+<div class="official-warning">
+  <strong>⚠️ Note:</strong> The only official websites of <strong>Beginner Trader Helper™</strong> are 
+  <a href="https://www.beginnertrader.store/" target="_blank">beginnertrader.store</a> and 
+  <a href="https://www.beginnertrader.shop" target="_blank">beginnertrader.shop</a>. 
+  We do not operate on any other domains. 
+  <br> Always verify the links from our official <a href="https://www.instagram.com/beginner_trader_helper/" target="_blank">Instagram</a> or 
+  <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank">YouTube</a> pages.
+</div>
 
-  <section class="features">
-    <div class="feature">✅ Lifetime Validity Access</div>
-    <div class="feature">✅ 85–90% Accuracy Based Strategies</div>
-    <div class="feature">✅ Automatic Indicator Updates</div>
-  </section>
+<style>
+.official-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin: 20px auto;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 960px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+.official-warning a {
+  color: #0c5460;
+  font-weight: 500;
+  text-decoration: underline;
+}
+</style>
+  
+  
+<!-- ===================== CONTACT SECTION ===================== -->
+<section class="contact" id="contact">
 
-  <section class="products">
-    <img src="https://beginnertrader.store/assets/bundle.png" alt="eBook Bundle"/>
-    <img src="https://beginnertrader.store/assets/bth-algo.png" alt="BTH Algo Screenshot"/>
-  </section>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Have questions? We're here to help</p>
 
-  <section class="note">
-    <strong>⚠️ Note:</strong> This is the official website of Beginner Trader Helper™.<br/>
-    Please verify all links from our YouTube or Instagram profiles. Avoid unofficial pages using similar names.
-  </section>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Email us at: <strong>bthsupport@beginnertrader.store</strong></p>
+        <p>We typically respond within 24 hours during business days.</p>
 
-  <section style="text-align: center;">
-    <a class="social" href="https://www.youtube.com/c/beginnertraderhelper" target="_blank">📺 YouTube</a>
-    <a class="social" href="https://www.instagram.com/beginner_trader_helper/" target="_blank">📸 Instagram</a>
-    <a class="social" href="https://wa.me/918700659539" target="_blank">📱 WhatsApp</a>
-  </section>
+        <div class="social-links">
+          <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/beginner_trader_helper/#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.link/3af9e0" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://telegram.me/+EV4khEeJ5XozYmM1" target="_blank" style="color: #0088cc;"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
 
-  <footer>
-    &copy; 2025 Beginner Trader Helper™. All rights reserved.
-  </footer>
-</body>
-</html>
+<form action="https://formsubmit.co/bthsupport@beginnertrader.store" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required />
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea name="message" id="message" rows="4" required></textarea>
+  </div>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+
+
+ <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>BEGINNER TRADER HELPER</h2>
+        <p>Learn Smart. Trade Smarter.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/beginner_trader_helper/#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://telegram.me/+EV4khEeJ5XozYmM1" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#ebooks">eBooks</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#" onclick="openModal('privacyModal')">Privacy Policy</a></li>
+          <li><a href="#" onclick="openModal('termsModal')">Terms of Service</a></li>
+          <li><a href="#" onclick="openModal('refundModal')">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <p><strong>Important:</strong> All our products are in digital format. You will receive access through online download only. We do not deliver any physical books. If you use any trading indicators or algorithms provided, it is at your own risk. We are not SEBI-registered financial advisors. This website and its offerings comply with applicable Indian laws under the Information Technology Act, 2000 and Consumer Protection (E-Commerce) Rules, 2020.</p>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> Beginner Trader Shop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MODALS ===================== -->
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+    <h2>Privacy Policy</h2>
+    <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and purchase our digital products.</p>
+    <h3>Information Collection</h3>
+    <p>We collect your name, email, and transaction details for orders and support.</p>
+    <h3>Use of Information</h3>
+    <p>Used to process orders and improve services. No spam.</p>
+    <h3>Third Parties</h3>
+    <p>We use third-party services ( cosmofeed and instamojo ). Their privacy policies apply.</p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:bthsupport@beginnertrader.store">bthsupport@beginnertrader.store</a></p>
+  </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('termsModal')">&times;</span>
+    <h2>Terms of Service</h2>
+    <p>By using this website and purchasing products, you agree to the terms below:</p>
+    <ul>
+      <li>All products are digital. No physical delivery.</li>
+      <li>Resale or redistribution is not allowed.</li>
+      <li>Trading involves risk. We are not SEBI-registered advisors.</li>
+      <li>Terms may change anytime. Stay updated.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Refund Policy Modal -->
+<div id="refundModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('refundModal')">&times;</span>
+    <h2>Refund Policy</h2>
+    <p>We do not offer refunds for digital content once accessed or downloaded.</p>
+    <h3>Exceptions:</h3>
+    <ul>
+      <li>Duplicate payment</li>
+      <li>Content access issue (our fault)</li>
+    </ul>
+    <p>Contact: <a href="mailto:bthsupport@beginnertrader.store">bthsupport@beginnertrader.store</a> within 24 hours with proof.</p>
+  </div>
+</div>
+
+<!-- ===================== CSS FOR MODALS ===================== -->
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  overflow: auto;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content h2 {
+  margin-top: 0;
+}
+.close {
+  color: #333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+<!-- ===================== JS SCRIPTS ===================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) modal.style.display = 'none';
+  });
+};
+</script>
+
+<!-- Floating WhatsApp Widget -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .whatsapp-float a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+  }
+
+  .whatsapp-float a:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+  }
+
+  .whatsapp-float i {
+    font-size: 20px;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .whatsapp-float a {
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+    .whatsapp-float i {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<div class="whatsapp-float">
+  <a href="https://wa.link/3af9e0." target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Chat with Us
+  </a>
+</div>
+
