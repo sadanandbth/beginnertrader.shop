@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTH Course Access</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 300px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #player {
+      display: none;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 30px;
+    }
+
+    .responsive-iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+
+    .responsive-iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    #countdown {
+      font-weight: bold;
+      color: yellow;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h2 { font-size: 1.4rem; }
+      button, input { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔐 BTH Premium Video Access</h2>
+  <p>Enter your access code below:</p>
+  <input type="password" id="codeInput" placeholder="Enter code" />
+  <button onclick="checkCode()">Unlock</button>
+
+  <div id="player">
+    <p>🎥 Access granted. Video will expire in <span id="countdown">30:00</span></p>
+    <div class="responsive-iframe-container">
+      <iframe 
+        src="https://drive.google.com/file/d/1W2Whk1iCyixIESFdRlIeE250UaxcNwaY/preview"
+        allow="autoplay">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    const ACCESS_CODE = "bth4.3.3";
+    let countdownSeconds = 30 * 60;
+
+    function checkCode() {
+      const code = document.getElementById("codeInput").value;
+      if (code === ACCESS_CODE) {
+        document.getElementById("player").style.display = "block";
+        startCountdown();
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      } else {
+        alert("❌ Invalid code. Contact support.");
+      }
+    }
+
+    function startCountdown() {
+      const countdownEl = document.getElementById("countdown");
+      const interval = setInterval(() => {
+        let minutes = Math.floor(countdownSeconds / 60);
+        let seconds = countdownSeconds % 60;
+        countdownEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+        countdownSeconds--;
+        if (countdownSeconds < 0) {
+          clearInterval(interval);
+          alert("⏳ Time's up! Reload the page to enter code again.");
+          window.location.href = "https://beginnertrader.shop";
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
