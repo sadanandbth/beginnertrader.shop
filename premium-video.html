@@ -3,94 +3,388 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTH Course Access</title>
+  <title>BTH Premium Course Access</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #0f0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
-    }
-
-    h2 {
-      margin-top: 20px;
-      font-size: 1.8rem;
-      text-align: center;
-    }
-
-    input {
-      padding: 10px;
-      font-size: 16px;
-      width: 80%;
-      max-width: 300px;
-      margin-top: 15px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      font-size: 16px;
-      background-color: green;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #player {
-      display: none;
-      width: 100%;
-      max-width: 900px;
-      margin-top: 30px;
-    }
-
-    .responsive-iframe-container {
+      justify-content: center;
       position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+      overflow-x: hidden;
     }
 
-    .responsive-iframe-container iframe {
+    body::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+      animation: backgroundFloat 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(1deg); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 
+        0 32px 64px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      color: #2d3748;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: #718096;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a0aec0;
+      font-size: 1.1rem;
+      z-index: 2;
+    }
+
+    input {
+      width: 100%;
+      padding: 18px 20px 18px 50px;
+      font-size: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+      color: #2d3748;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
+    input::placeholder {
+      color: #a0aec0;
+    }
+
+    .unlock-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .unlock-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .unlock-btn:hover::before {
+      left: 100%;
+    }
+
+    .unlock-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .unlock-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Player Styles */
+    .player-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .access-granted {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      background: #48bb78;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .countdown-display {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      color: #ffd700;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .close-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .video-wrapper {
+      width: 100%;
+      height: calc(100vh - 100px);
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-wrapper iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
 
-    #countdown {
-      font-weight: bold;
-      color: yellow;
-      margin-top: 10px;
+    /* Error message styling */
+    .error-message {
+      background: linear-gradient(135deg, #fc8181, #f56565);
+      color: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-top: 15px;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(245, 101, 101, 0.3);
+      animation: shake 0.5s ease-in-out;
     }
 
-    @media (max-width: 600px) {
-      h2 { font-size: 1.4rem; }
-      button, input { font-size: 14px; }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    .success-message {
+      background: linear-gradient(135deg, #68d391, #48bb78);
+      color: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-top: 15px;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(72, 187, 120, 0.3);
+      animation: slideIn 0.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 25px;
+        margin: 20px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .player-container {
+        padding: 15px;
+      }
+      
+      .player-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+      
+      .video-wrapper {
+        height: calc(100vh - 140px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 25px 20px;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      input, .unlock-btn {
+        padding: 16px;
+        font-size: 15px;
+      }
+      
+      input {
+        padding-left: 45px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="logo">
+      <i class="fas fa-play"></i>
+    </div>
+    
+    <h1>BTH Premium</h1>
+    <p class="subtitle">Exclusive course content access</p>
+    
+    <div class="input-group">
+      <i class="fas fa-lock input-icon"></i>
+      <input type="password" id="codeInput" placeholder="Enter your access code" />
+    </div>
+    
+    <button class="unlock-btn" onclick="checkCode()">
+      <i class="fas fa-unlock-alt" style="margin-right: 8px;"></i>
+      Unlock Content
+    </button>
+    
+    <div id="messageContainer"></div>
+  </div>
 
-  <h2>🔐 BTH Premium Video Access</h2>
-  <p>Enter your access code below:</p>
-  <input type="password" id="codeInput" placeholder="Enter code" />
-  <button onclick="checkCode()">Unlock</button>
-
-  <div id="player">
-    <p>🎥 Access granted. Video will expire in <span id="countdown">30:00</span></p>
-    <div class="responsive-iframe-container">
+  <div class="player-container" id="player">
+    <div class="player-header">
+      <div class="access-granted">
+        <div class="status-indicator"></div>
+        <i class="fas fa-check-circle"></i>
+        Access Granted
+      </div>
+      
+      <div class="countdown-display">
+        <i class="fas fa-clock"></i>
+        <span id="countdown">30:00</span>
+      </div>
+      
+      <button class="close-btn" onclick="closePlayer()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="video-wrapper">
       <iframe 
         src="https://drive.google.com/file/d/1W2Whk1iCyixIESFdRlIeE250UaxcNwaY/preview"
         allow="autoplay">
@@ -101,33 +395,89 @@
   <script>
     const ACCESS_CODE = "bth4.3.3";
     let countdownSeconds = 30 * 60;
+    let countdownInterval;
+
+    function showMessage(message, type = 'error') {
+      const container = document.getElementById('messageContainer');
+      const messageClass = type === 'success' ? 'success-message' : 'error-message';
+      
+      container.innerHTML = `<div class="${messageClass}">
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        ${message}
+      </div>`;
+      
+      if (type === 'error') {
+        setTimeout(() => {
+          container.innerHTML = '';
+        }, 4000);
+      }
+    }
 
     function checkCode() {
-      const code = document.getElementById("codeInput").value;
+      const code = document.getElementById("codeInput").value.trim();
+      
+      if (!code) {
+        showMessage("Please enter an access code");
+        return;
+      }
+      
       if (code === ACCESS_CODE) {
-        document.getElementById("player").style.display = "block";
-        startCountdown();
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        showMessage("Access granted! Loading content...", 'success');
+        setTimeout(() => {
+          document.getElementById("player").style.display = "block";
+          document.body.style.overflow = "hidden";
+          startCountdown();
+        }, 1000);
       } else {
-        alert("❌ Invalid code. Contact support.");
+        showMessage("Invalid access code. Please contact support for assistance.");
+        document.getElementById("codeInput").value = "";
+        document.getElementById("codeInput").focus();
       }
     }
 
     function startCountdown() {
       const countdownEl = document.getElementById("countdown");
-      const interval = setInterval(() => {
+      
+      countdownInterval = setInterval(() => {
         let minutes = Math.floor(countdownSeconds / 60);
         let seconds = countdownSeconds % 60;
         countdownEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+        
         countdownSeconds--;
+        
         if (countdownSeconds < 0) {
-          clearInterval(interval);
-          alert("⏳ Time's up! Reload the page to enter code again.");
+          clearInterval(countdownInterval);
+          alert("⏰ Session expired! You'll be redirected to reload the page.");
           window.location.href = "https://beginnertrader.shop";
         }
       }, 1000);
     }
-  </script>
 
+    function closePlayer() {
+      if (confirm("Are you sure you want to close the video? Your session will continue running.")) {
+        document.getElementById("player").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    // Enhanced keyboard interaction
+    document.getElementById("codeInput").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        checkCode();
+      }
+    });
+
+    // Auto-focus on input when page loads
+    window.addEventListener('load', function() {
+      document.getElementById("codeInput").focus();
+    });
+
+    // Prevent right-click context menu on video
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IFRAME') {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
