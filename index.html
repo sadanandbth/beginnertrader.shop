@@ -1615,7 +1615,7 @@
                             <div class="course-price">₹ 1899</div>
                             
                             <div class="button-group">
-                                <a href="https://superprofile.bio/course/beginnertraderhelper" class="enroll-btn">Enroll Now</a>
+                                <a href="https://superprofile.bio/course/a3cd1c57-33ea-49f2-9733-0e3d2c50fa19?dc=bth4.3.3" class="enroll-btn">Enroll Now</a>
                                 <a href="#" class="sample-button" onclick="openGallery(['https://i.postimg.cc/zvNbkYK1/Screenshot-2025-02-08-212051.png', 'https://i.postimg.cc/DZv3QC0M/Screenshot-2025-03-28-005249.png', 'https://i.postimg.cc/SRj03JWL/Screenshot-2025-03-28-004941.png'])">View Sample</a>
                             </div>
                             
@@ -3122,49 +3122,67 @@
     </style>
 </head>
 <body>
-    <!-- ===================== CONTACT SECTION ===================== -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Have questions? We're here to help</p>
+<!-- ===================== CONTACT SECTION ===================== -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="section-subtitle">Have questions? We're here to help</p>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>Email us at: <strong>bthsupport@beginnertrader.store</strong></p>
-                <p>We typically respond within 24 hours during business days.</p>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Email us at: <strong>bthsupport@beginnertrader.store</strong></p>
+      <p>We typically respond within 24 hours during business days.</p>
 
-                <div class="social-links">
-                    <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/beginner_trader_helper/#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.link/3af9e0" target="_blank" aria-label="WhatsApp" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://telegram.me/+EV4khEeJ5XozYmM1" target="_blank" aria-label="Telegram" style="background: #0088cc;"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-            </div>
+      <div class="social-links">
+        <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/beginner_trader_helper/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.link/3af9e0" target="_blank" aria-label="WhatsApp" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://telegram.me/+EV4khEeJ5XozYmM1" target="_blank" aria-label="Telegram" style="background: #0088cc;"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
 
-            <form action="https://formsubmit.co/bthsupport@beginnertrader.store" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" id="name" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea name="message" id="message" rows="4" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+    <div id="form-container">
+      <form action="https://formsubmit.co/d62d525a62ea69f6f5979638af4a6ef2" method="POST" onsubmit="showThankYou(); return true;">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <!-- Remove _next to avoid redirection -->
+        
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" name="name" id="name" required />
         </div>
-    </section>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Hidden thank-you message -->
+    <div id="thank-you" style="display:none; padding: 2rem; background-color: #e6ffee; color: #006600; border-radius: 8px;">
+      <h3>Thank you! 🎉</h3>
+      <p>Your message has been sent successfully. We’ll get back to you shortly.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showThankYou() {
+    // Wait briefly to allow the form to submit
+    setTimeout(function () {
+      document.getElementById("form-container").style.display = "none";
+      document.getElementById("thank-you").style.display = "block";
+    }, 1000);
+  }
+</script>
 
     <!-- Footer -->
     <footer>
@@ -3380,4 +3398,3 @@
     <i class="fab fa-whatsapp"></i> Chat with Us
   </a>
 </div>
-
