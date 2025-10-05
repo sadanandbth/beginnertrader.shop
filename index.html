@@ -1474,22 +1474,45 @@
         </div>
     </section>
     
-<!-- Trading Chart Comparison - Stock Market -->
-<section class="chart-comparison-section" style="padding: 80px 20px; background-color: white; text-align: center; font-family: 'Segoe UI', Roboto, sans-serif;">
+    <!-- Trading Chart Comparison - Indian -->
+<section class="chart-comparison-section" style="padding: 80px 20px 60px; background-color: #fafafa; text-align: center; font-family: 'Segoe UI', Roboto, sans-serif;">
   <div class="container" style="max-width: 1200px; margin: 0 auto;">
     <h2 class="section-title" style="font-size: 34px; font-weight: 800; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.5px;">
-      Chart Comparison – STOCK MARKET
+      Chart Comparison – INDIAN
     </h2>
     <p class="section-subtitle" style="font-size: 18px; font-weight: 500; color: #555; margin-bottom: 40px; line-height: 1.6;">
-      Drag the slider to compare <span style="font-weight: 700; color:#0d47a1;">Clean Price Action</span> (left) 
-      vs. <span style="font-weight: 700; color:#b71c1c;">Chart with Indicators</span> (right).
+      Drag the slider to explore our <span style="font-weight: 700; color:#e65100;">Advanced Setup</span> 
+      highlighting <span style="font-weight: 700; color:#1b5e20;">Key Zones</span>.
     </p>
 
-    <div class="comparison-container" id="comparison1">
-      <img src="https://i.postimg.cc/43w1B6mk/Picsart-25-10-05-23-26-22-142.jpg" class="after-img" alt="After Image">
-      <img src="https://i.postimg.cc/VvXg93tH/Picsart-25-10-05-23-25-28-138.jpg" class="before-img" id="before1" alt="Before Image">
-      <div class="slider-handle" id="slider1">
-        <div class="slider-button"></div>
+    <div class="comparison-wrapper">
+      <div class="comparison-container" id="comparison1">
+        <img src="https://i.postimg.cc/43w1B6mk/Picsart-25-10-05-23-26-22-142.jpg" class="after-img" alt="After Image">
+        <img src="https://i.postimg.cc/VvXg93tH/Picsart-25-10-05-23-25-28-138.jpg" class="before-img" id="before1" alt="Before Image">
+        <div class="slider-handle" id="slider1">
+          <div class="slider-line"></div>
+          <div class="slider-button"></div>
+        </div>
+      </div>
+      
+      <!-- Bottom Drag Button with Left/Right Controls -->
+      <div class="bottom-controls" id="bottomControls1">
+        <button class="control-btn left-btn" id="leftBtn1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <div class="bottom-drag-button" id="bottomDrag1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8L22 12L18 16M6 8L2 12L6 16M12 2v20"/>
+          </svg>
+          <span>Drag to Compare</span>
+        </div>
+        <button class="control-btn right-btn" id="rightBtn1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -1506,18 +1529,51 @@
       highlighting <span style="font-weight: 700; color:#1b5e20;">Key Zones</span>.
     </p>
 
-    <div class="comparison-container" id="comparison2">
-      <img src="https://i.postimg.cc/zXNWydzy/Picsart-25-10-06-00-02-03-146.jpg" class="after-img" alt="After Image">
-      <img src="https://i.postimg.cc/vmZtc0vG/Picsart-25-10-06-00-00-08-139.jpg" class="before-img" id="before2" alt="Before Image">
-      <div class="slider-handle" id="slider2">
-        <div class="slider-button"></div>
+    <div class="comparison-wrapper">
+      <div class="comparison-container" id="comparison2">
+        <img src="https://i.postimg.cc/zXNWydzy/Picsart-25-10-06-00-02-03-146.jpg" class="after-img" alt="After Image">
+        <img src="https://i.postimg.cc/vmZtc0vG/Picsart-25-10-06-00-00-08-139.jpg" class="before-img" id="before2" alt="Before Image">
+        <div class="slider-handle" id="slider2">
+          <div class="slider-line"></div>
+          <div class="slider-button"></div>
+        </div>
+      </div>
+      
+      <!-- Bottom Drag Button with Left/Right Controls -->
+      <div class="bottom-controls" id="bottomControls2">
+        <button class="control-btn left-btn" id="leftBtn2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <div class="bottom-drag-button" id="bottomDrag2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8L22 12L18 16M6 8L2 12L6 16M12 2v20"/>
+          </svg>
+          <span>Drag to Compare</span>
+        </div>
+        <button class="control-btn right-btn" id="rightBtn2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Shared CSS -->
+<!-- Optimized CSS -->
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .comparison-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
   .comparison-container {
     position: relative;
     width: 100%;
@@ -1525,20 +1581,23 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.08);
-    margin-top: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .comparison-container img {
     position: absolute;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    pointer-events: none;
   }
 
   .before-img {
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    transition: clip-path 0.05s ease-out;
+    will-change: clip-path;
     z-index: 2;
   }
 
@@ -1548,78 +1607,248 @@
 
   .slider-handle {
     position: absolute;
-    top: 0; left: 50%;
-    width: 3px; height: 100%;
-    background: rgba(0,0,0,0.6);
+    top: 0; 
+    left: 50%;
+    width: 4px; 
+    height: 100%;
     z-index: 3;
     cursor: ew-resize;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    transform: translateX(-2px);
   }
 
-  /* ✅ Drag Button Style */
-  .slider-button {
+  .slider-line {
     position: absolute;
-    top: 50%; transform: translateY(-50%);
-    width: 40px; height: 40px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  }
+
+  .slider-button {
+    position: relative;
+    width: 48px; 
+    height: 48px;
     border-radius: 50%;
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2), 0 0 0 2px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25), 0 0 0 3px rgba(0,0,0,0.1);
     pointer-events: none;
+    z-index: 4;
+    transition: transform 0.2s ease;
   }
 
-  /* ✅ Cross Icon inside Button */
+  .slider-handle:active .slider-button {
+    transform: scale(1.1);
+  }
+
   .slider-button::before,
   .slider-button::after {
     content: '';
     position: absolute;
-    background: #000;
+    background: linear-gradient(135deg, #333 0%, #000 100%);
   }
+  
   .slider-button::before {
-    width: 16px; height: 2px;
-    top: 50%; left: 50%;
+    width: 18px; 
+    height: 3px;
+    top: 50%; 
+    left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 2px;
   }
+  
   .slider-button::after {
-    width: 2px; height: 16px;
-    top: 50%; left: 50%;
+    width: 3px; 
+    height: 18px;
+    top: 50%; 
+    left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 2px;
+  }
+
+  /* Bottom Controls Container */
+  .bottom-controls {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 5;
+  }
+
+  /* Control Buttons (Left/Right) */
+  .control-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .control-btn:hover {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+  }
+
+  .control-btn:active {
+    transform: scale(0.95);
+  }
+
+  .control-btn svg {
+    pointer-events: none;
+  }
+
+  /* Bottom Drag Button */
+  .bottom-drag-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+    border-radius: 30px;
+    cursor: ew-resize;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .bottom-drag-button:hover {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+  }
+
+  .bottom-drag-button:active {
+    transform: scale(0.98);
+  }
+
+  .bottom-drag-button svg {
+    width: 24px;
+    height: 24px;
+    animation: slideHint 2s ease-in-out infinite;
+  }
+
+  @keyframes slideHint {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
   }
 
   @media (max-width: 768px) {
-    .comparison-container { aspect-ratio: 1/1; border-radius: 14px; }
-    .slider-button { width: 32px; height: 32px; }
+    .comparison-container { 
+      aspect-ratio: 1/1; 
+      border-radius: 14px; 
+    }
+    .slider-button { 
+      width: 40px; 
+      height: 40px; 
+    }
+    .slider-button::before { width: 14px; height: 2px; }
+    .slider-button::after { width: 2px; height: 14px; }
+    .bottom-controls {
+      bottom: -55px;
+      gap: 10px;
+    }
+    .control-btn {
+      width: 40px;
+      height: 40px;
+    }
+    .control-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+    .bottom-drag-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .bottom-drag-button svg {
+      width: 20px;
+      height: 20px;
+    }
   }
+
   @media (max-width: 480px) {
-    .chart-comparison-section { padding: 60px 15px; }
-    .comparison-container { border-radius: 12px; }
+    .chart-comparison-section { 
+      padding: 60px 15px; 
+    }
+    .comparison-container { 
+      border-radius: 12px; 
+    }
+    .slider-button { 
+      width: 36px; 
+      height: 36px; 
+    }
+    .bottom-controls {
+      gap: 8px;
+    }
+    .control-btn {
+      width: 36px;
+      height: 36px;
+    }
+    .control-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+    .bottom-drag-button {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+    .bottom-drag-button span {
+      display: none;
+    }
   }
 </style>
 
-<!-- Dual Slider Script -->
+<!-- Optimized Dual Slider Script -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    function initSlider(containerId, beforeId, sliderId) {
+    function initSlider(containerId, beforeId, sliderId, bottomDragId, leftBtnId, rightBtnId) {
       const container = document.getElementById(containerId);
       const before = document.getElementById(beforeId);
       const slider = document.getElementById(sliderId);
+      const bottomDrag = document.getElementById(bottomDragId);
+      const leftBtn = document.getElementById(leftBtnId);
+      const rightBtn = document.getElementById(rightBtnId);
 
       if (!container || !before || !slider) return;
 
       let isActive = false;
       let currentPercent = 50;
+      let rafId = null;
 
       const updateSlider = (percent) => {
         const clamped = Math.min(100, Math.max(0, percent));
-        before.style.clipPath = `polygon(0 0, ${clamped}% 0, ${clamped}% 100%, 0 100%)`;
-        slider.style.left = `${clamped}%`;
-        currentPercent = clamped;
+        if (rafId) cancelAnimationFrame(rafId);
+        
+        rafId = requestAnimationFrame(() => {
+          before.style.clipPath = `polygon(0 0, ${clamped}% 0, ${clamped}% 100%, 0 100%)`;
+          slider.style.left = `${clamped}%`;
+          currentPercent = clamped;
+        });
       };
 
-      const getPointerX = (e) => e.clientX || (e.touches?.[0]?.clientX) || 0;
+      const getPointerX = (e) => e.clientX || e.touches?.[0]?.clientX || 0;
 
       const handleStart = (e) => {
         e.preventDefault();
@@ -1641,28 +1870,45 @@
           isActive = false;
           document.removeEventListener('mousemove', moveHandler);
           document.removeEventListener('mouseup', endHandler);
-          document.removeEventListener('touchmove', moveHandler);
+          document.removeEventListener('touchmove', moveHandler, { passive: false });
           document.removeEventListener('touchend', endHandler);
         };
 
         document.addEventListener('mousemove', moveHandler);
         document.addEventListener('mouseup', endHandler);
-        document.addEventListener('touchmove', moveHandler);
+        document.addEventListener('touchmove', moveHandler, { passive: false });
         document.addEventListener('touchend', endHandler);
       };
 
       slider.addEventListener('mousedown', handleStart);
-      slider.addEventListener('touchstart', handleStart);
+      slider.addEventListener('touchstart', handleStart, { passive: false });
+
+      if (bottomDrag) {
+        bottomDrag.addEventListener('mousedown', handleStart);
+        bottomDrag.addEventListener('touchstart', handleStart, { passive: false });
+      }
+
+      // Left/Right button controls
+      if (leftBtn) {
+        leftBtn.addEventListener('click', () => {
+          updateSlider(Math.max(0, currentPercent - 5));
+        });
+      }
+
+      if (rightBtn) {
+        rightBtn.addEventListener('click', () => {
+          updateSlider(Math.min(100, currentPercent + 5));
+        });
+      }
 
       updateSlider(50);
     }
 
-    // Initialize both sliders
-    initSlider('comparison1', 'before1', 'slider1');
-    initSlider('comparison2', 'before2', 'slider2');
+    // Initialize both sliders with button controls
+    initSlider('comparison1', 'before1', 'slider1', 'bottomDrag1', 'leftBtn1', 'rightBtn1');
+    initSlider('comparison2', 'before2', 'slider2', 'bottomDrag2', 'leftBtn2', 'rightBtn2');
   });
 </script>
-
     
 <!DOCTYPE html>
 <html lang="en">
