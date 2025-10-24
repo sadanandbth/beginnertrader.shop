@@ -12,6 +12,128 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>BEGINNER TRADER HELPER - Trading Courses & eBooks</title>
     
+    <!-- Diwali Sale Popup (Optimized, Smooth Scroll Integrated) -->
+<style>
+  #popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #popupOverlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popupBox {
+    background: linear-gradient(135deg, #1b4332, #2d6a4f);
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    animation: popupAnimation 0.8s ease forwards;
+    position: relative;
+  }
+  @keyframes popupAnimation {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .popupBox h2 { color: #ffd166; font-size: 1.8rem; margin-bottom: 10px; }
+  .popupBox p { font-size: 1rem; margin-bottom: 20px; line-height: 1.5; }
+  .timer { display: flex; justify-content: center; gap: 10px; font-weight: bold; margin-bottom: 20px; }
+  .timer div { background: #081c15; padding: 10px 15px; border-radius: 10px; font-size: 1.1rem; color: #fff; min-width: 50px; }
+  .popupBtn { display: inline-block; padding: 12px 25px; background: #06d6a0; color: #000; border-radius: 30px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; }
+  .popupBtn:hover { background: #ffd166; color: #000; }
+  .closeBtn { position: absolute; top: 10px; right: 15px; font-size: 1.4rem; color: #fff; cursor: pointer; }
+  .closeBtn:hover { color: #ffd166; }
+</style>
+
+<div id="popupOverlay">
+  <div class="popupBox">
+    <span class="closeBtn" id="closePopup">&times;</span>
+    <h2>🎉 Festival season offer !</h2>
+    <p>Flat <strong>91% OFF</strong> on <strong>BTH ALGO V4.3.3</strong> Course.<br>Limited Time Offer – Grab it Now!</p>
+    <div class="timer">
+      <div id="days">00</div>:
+      <div id="hours">00</div>:
+      <div id="minutes">00</div>:
+      <div id="seconds">00</div>
+    </div>
+    <a href="#courses" id="claimOfferBtn" class="popupBtn">Claim Offer</a>
+  </div>
+</div>
+
+<script>
+  const countdownKey = 'diwaliSaleCountdown';
+  const durationHours = 24;
+  const overlay = document.getElementById('popupOverlay');
+  const closePopup = document.getElementById('closePopup');
+  const claimOfferBtn = document.getElementById('claimOfferBtn');
+
+  function startCountdown() {
+    let targetTime = localStorage.getItem(countdownKey);
+    if (!targetTime) {
+      targetTime = Date.now() + durationHours * 60 * 60 * 1000;
+      localStorage.setItem(countdownKey, targetTime);
+    }
+
+    function updateTimer() {
+      const now = Date.now();
+      const distance = targetTime - now;
+      if (distance <= 0) {
+        document.querySelector('.timer').innerHTML = 'Offer Expired!';
+        localStorage.removeItem(countdownKey);
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(() => overlay.classList.add('active'), 800);
+    startCountdown();
+  });
+
+  closePopup.addEventListener('click', () => overlay.classList.remove('active'));
+
+  // Smooth scroll on Claim Offer
+  claimOfferBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    overlay.classList.remove('active');
+    const target = document.querySelector('#courses');
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    } else {
+      window.location.href = 'https://beginnertrader.shop/#courses';
+    }
+  });
+</script>
+    
+    
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1300,7 +1422,7 @@
 <body>
     <!-- Diwali Special Banner -->
     <div class="diwali-banner" id="diwaliBanner">
-        <p>🪔 Festive Season Offer: Flat 91% OFF on BTH ALGO V4.3.3 Course ! Limited Time Only. 🪔</p>
+        <p>🪔 Festival Season Offer: Flat 91% OFF on BTH ALGO V4.3.3 Course ! Limited Time Only. 🪔</p>
     </div>
 
     <!-- Header -->
@@ -1432,6 +1554,7 @@
                         <p class="course-description">Master price action strategies used by institutional traders worldwide.</p>
                         
                         <div class="course-features">
+                          <div class="feature-item">Language Hindi </div>
                             <div class="feature-item">EBooks covering advanced Price Action & SMC concepts</div>
                             <div class="feature-item">Updated Trading Indicator for better accuracy</div>
                             <div class="feature-item">Full Video Tutorials for easy understanding</div>
@@ -1447,7 +1570,7 @@
                             <!-- First-Time Enroll Offer Box -->
                             <div style="margin-top: 8px; background: #eafaf1; border: 1px solid #2ecc71; padding: 8px 12px; border-radius: 8px; display: inline-block;">
                                 <span style="font-size: 1.0rem; font-weight: bold; color: #1D9F77;">
-                                🎉 Festive Season Offer: ₹ 1499
+                                🎉 Festival Season Offer: ₹ 1499
                                 </span>
                             </div>
                         </div>
@@ -1461,6 +1584,7 @@
                             <h4 class="faq-title">What is BTH 4.3.3 (Advanced Version)?</h4>
                             <div class="faq-content">
                                 <div class="faq-item">BTH 4.3.3 Advanced Version is a complete trading solution that includes:</div>
+                                <div class="faq-item">✅ Language Hindi </div>
                                 <div class="faq-item">✅ EBooks covering advanced Price Action & SMC concepts</div>
                                 <div class="faq-item">✅ Updated Trading Indicator for better accuracy</div>
                                 <div class="faq-item">✅ Full Video Tutorials for easy understanding</div>
