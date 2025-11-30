@@ -1392,39 +1392,70 @@ function closeOfferPopup() {
         <p>🪔 Festival Season Offer: Flat 91% OFF on BTH ALGO V4.3.3 Course ! Limited Time Only. 🪔</p>
     </div>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a href="#home" class="logo">
-                <i class="fas fa-gem"></i> BEGINNER TRADER HELPER
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <a href="#home" class="logo">
+            <i class="fas fa-gem"></i> BEGINNER TRADER HELPER
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="nav desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#ebooks">eBooks</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+
+            <!-- ⭐ NEW CALCULATOR BUTTON -->
+            <a href="https://beginnertrader.shop/bth-financial-growth-and-compound-calculator.html" 
+               class="calculator-btn" 
+               style="
+                    margin-left:15px;
+                    padding:10px 18px;
+                    background:#2e864c;
+                    color:#fff;
+                    border-radius:6px;
+                    font-weight:600;
+                    transition:0.3s;
+               ">
+                📊 Calculator
             </a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="nav desktop-nav">
-                <a href="#home">Home</a>
-                <a href="#courses">Courses</a>
-                <a href="#ebooks">eBooks</a>
-                <a href="#about">About</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        </nav>
 
-            <!-- Mobile Menu Button -->
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-                ☰
-            </button>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
 
-        <!-- Mobile Navigation -->
-        <div id="mobileMenu" class="mobile-nav">
-            <a href="#home" onclick="toggleMenu()">Home</a>
-            <a href="#courses" onclick="toggleMenu()">Courses</a>
-            <a href="#ebooks" onclick="toggleMenu()">eBooks</a>
-            <a href="#about" onclick="toggleMenu()">About</a>
-            <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
-            <a href="#contact" onclick="toggleMenu()">Contact</a>
-        </div>
-    </header>
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="mobile-nav">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#courses" onclick="toggleMenu()">Courses</a>
+        <a href="#ebooks" onclick="toggleMenu()">eBooks</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+
+        <!-- ⭐ NEW CALCULATOR BUTTON (Mobile) -->
+        <a href="https://beginnertrader.shop/bth-financial-growth-and-compound-calculator.html"
+           onclick="toggleMenu()"
+           style="
+                background:#2e864c;
+                color:#fff;
+                font-weight:600;
+                padding:12px;
+                margin-top:5px;
+                border-radius:5px;
+                text-align:center;
+                display:block;
+           ">
+            📊 Financial Growth Calculator
+        </a>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
