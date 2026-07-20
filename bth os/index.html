@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>BTH OS - Professional Trading Operating System</title>
+  <meta name="description" content="BTH OS by Beginner Trader Helper is a professional desktop trading operating system featuring analytics, trade journal, performance tracking, calculators, and advanced trader tools.">
+  <meta name="keywords" content="BTH OS, Trading OS, NIFTY Traders, BANKNIFTY Traders, Options Trading, Forex Trading, Trading Journal, Trade Analytics, MT5 Integration">
+  
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="https://bthalgo.com/images/bth%20os%20about.png">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Overlays -->
+  <div class="bg-grid"></div>
+  <div class="glow-orb-top"></div>
+  <div class="glow-orb-middle"></div>
+  <div class="glow-orb-bottom"></div>
+
+  <!-- 1. STICKY NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="navLogo">
+        <img src="https://bthalgo.com/images/logo.png" alt="BTH OS Logo" class="logo-img"> BTH OS
+      </a>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#showcase" class="nav-link">Showcase</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#why-bth" class="nav-link">Why BTH OS</a></li>
+        <li><a href="#calculators" class="nav-link">Calculators</a></li>
+        <li><a href="#ai-analyzer" class="nav-link">AI Analyzer</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="https://bthalgo.com/download" class="btn btn-primary btn-animate-glow" id="navDownloadBtn">
+          <i class="fa-solid fa-download"></i> Download BTH OS
+        </a>
+      </div>
+      
+      <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero" id="heroSection">
+    <div class="container hero-content">
+      <div class="badge">
+        <span class="badge-dot"></span> Free Beta Release
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        Trade Smarter.<br>Execute Faster.
+      </h1>
+      <p class="hero-subtitle" id="heroSubtitle">
+        Professional Trading Operating System built for serious traders. Take control of your execution, analytics, and journaling.
+      </p>
+      <div class="btn-group hero-cta">
+        <a href="https://bthalgo.com/download" class="btn btn-primary btn-animate-glow" id="heroDownloadBtn">
+          <i class="fa-solid fa-download"></i> Download BTH OS
+        </a>
+        <a href="#showcase" class="btn btn-secondary" id="heroFeaturesBtn">
+          View Features <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-showcase">
+      <div class="container">
+        <div class="app-window glass-card">
+          <div class="app-window-header">
+            <div class="app-dots">
+              <span class="app-dot red"></span>
+              <span class="app-dot yellow"></span>
+              <span class="app-dot green"></span>
+            </div>
+            <div class="app-window-title">BTH OS v1.0.0 &mdash; <span class="glow">Live Dashboard</span></div>
+          </div>
+          <div class="showcase-img-container showcase-image-wrapper" data-img-idx="0">
+            <img src="https://bthalgo.com/images/bth%20os%20dashboard.png" alt="BTH OS Live Dashboard View" loading="eager" id="heroDashboardImage">
+            <div class="image-hover-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-glow-overlay"></div>
+  </section>
+
+  <!-- 3. SOFTWARE SHOWCASE -->
+  <section class="showcase-section section-padding" id="showcase">
+    <div class="container">
+      <div class="section-header reveal-el">
+        <div class="badge">Showcase</div>
+        <h2 class="section-title">Explore BTH OS</h2>
+        <p class="section-subtitle">A high-performance trading cockpit consolidating your complete routine inside a unified desktop dashboard.</p>
+      </div>
+      
+      <!-- Interactive Tabs -->
+      <div class="tabs-container reveal-el" id="showcaseTabs">
+        <button class="tab-btn active" data-tab="dashboard-tab" id="tabBtnDashboard">
+          <i class="fa-solid fa-chart-pie"></i> Dashboard
+        </button>
+        <button class="tab-btn" data-tab="analytics-tab" id="tabBtnAnalytics">
+          <i class="fa-solid fa-chart-line"></i> Analytics
+        </button>
+        <button class="tab-btn" data-tab="journal-tab" id="tabBtnJournal">
+          <i class="fa-solid fa-book"></i> Journal
+        </button>
+        <button class="tab-btn" data-tab="history-tab" id="tabBtnHistory">
+          <i class="fa-solid fa-clock-rotate-left"></i> Trade History
+        </button>
+      </div>
+      
+      <!-- Tab Panels inside App Window Frame -->
+      <div class="showcase-content reveal-el">
+        <div class="app-window">
+          <div class="app-window-header">
+            <div class="app-dots">
+              <span class="app-dot red"></span>
+              <span class="app-dot yellow"></span>
+              <span class="app-dot green"></span>
+            </div>
+            <div class="app-window-title">BTH OS v1.0.0 &mdash; <span id="appWindowTabTitle" class="glow">Dashboard</span></div>
+          </div>
+          
+          <div id="dashboard-tab" class="tab-panel active">
+            <div class="showcase-image-wrapper" data-img-idx="0">
+              <img src="https://bthalgo.com/images/bth%20os%20dashboard.png" alt="BTH OS Dashboard" loading="lazy">
+              <div class="image-hover-overlay"></div>
+            </div>
+          </div>
+          
+          <div id="analytics-tab" class="tab-panel">
+            <div class="showcase-image-wrapper" data-img-idx="1">
+              <img src="https://bthalgo.com/images/bth%20os%20analytics.png" alt="BTH OS Analytics" loading="lazy">
+              <div class="image-hover-overlay"></div>
+            </div>
+          </div>
+          
+          <div id="journal-tab" class="tab-panel">
+            <div class="showcase-image-wrapper" data-img-idx="3">
+              <img src="https://bthalgo.com/images/bth%20os%20journal.png" alt="BTH OS Trading Journal" loading="lazy">
+              <div class="image-hover-overlay"></div>
+            </div>
+          </div>
+          
+          <div id="history-tab" class="tab-panel">
+            <div class="showcase-image-wrapper" data-img-idx="2">
+              <img src="https://bthalgo.com/images/bth%20os%20trade%20history.png" alt="BTH OS Trade History" loading="lazy">
+              <div class="image-hover-overlay"></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CORE FEATURES -->
+  <section class="features-section section-padding" id="features">
+    <div class="container">
+      <div class="section-header reveal-el">
+        <div class="badge">Features</div>
+        <h2 class="section-title">Engineered for Performance</h2>
+        <p class="section-subtitle">BTH OS is engineered with lightning-fast execution and essential trading features in mind.</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal-el" id="featureCardMT5">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <h3 class="feature-title">MT5 Integration</h3>
+          <p class="feature-desc">Link seamlessly with MetaTrader 5. Capture market conditions and feed execution streams directly into BTH OS without latency.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card reveal-el" id="featureCardJournal">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3 class="feature-title">Trading Journal</h3>
+          <p class="feature-desc">Consolidate thoughts, trade tags, rules adherence, charts, and mental notes inside a clean, modern diary log.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card reveal-el" id="featureCardAnalytics">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <h3 class="feature-title">Trade Analytics</h3>
+          <p class="feature-desc">Compute advanced win-rates, expectancy, average hold times, drawdown curves, and strategy specific feedback logs.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card reveal-el" id="featureCardTracking">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="feature-title">Performance Tracking</h3>
+          <p class="feature-desc">Monitor your compounding stats, daily progression charts, and metrics distribution to maintain consistency.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="feature-card reveal-el" id="featureCardRisk">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <h3 class="feature-title">Risk Calculator</h3>
+          <p class="feature-desc">Compute dynamic position sizing dynamically based on real-time stop-loss targets and balance percentage limits.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="feature-card reveal-el" id="featureCardSimulator">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="feature-title">Trading Simulator</h3>
+          <p class="feature-desc">Backtest rules, run simulated orders, and practice strategy layouts in a safe sandbox local ecosystem.</p>
+        </div>
+        <!-- Feature 7 -->
+        <div class="feature-card reveal-el" id="featureCardLocal">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="feature-title">Local Data Storage</h3>
+          <p class="feature-desc">Complete data privacy. All logs, trades, and personal calculations remain completely offline on your desktop disk.</p>
+        </div>
+        <!-- Feature 8 -->
+        <div class="feature-card reveal-el" id="featureCardExecution">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="feature-title">Fast Execution</h3>
+          <p class="feature-desc">Zero bloat desktop code design built directly for raw processing speeds. Instant hotkey triggers and low delays.</p>
+        </div>
+        <!-- Feature 9 -->
+        <div class="feature-card reveal-el" id="featureCardReports">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="feature-title">Professional Reports</h3>
+          <p class="feature-desc">Export comprehensive performance sheets containing details designed for trading reviews or team reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY BTH OS (COMPARISON) -->
+  <section class="why-section section-padding" id="why-bth">
+    <div class="container">
+      <div class="section-header reveal-el">
+        <div class="badge">Comparison</div>
+        <h2 class="section-title">BTH OS vs Traditional Trading</h2>
+        <p class="section-subtitle">How BTH OS refines your day-to-day routine compared to cluttered folders, templates, or basic SaaS spreadsheets.</p>
+      </div>
+      
+      <div class="comparison-wrapper glass-card reveal-el" id="comparisonTableWrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Features</th>
+              <th>Traditional Trading</th>
+              <th class="highlight">BTH OS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-param">Journal</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Cluttered Google Sheets / Notion
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Fully automated local system logs
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-param">Analytics</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Manual data math compilation
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Live expectancy & Win-Rate charts
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-param">Trade Review</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Scattered screenshot folders
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Timeline logs with embedded charts
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-param">Performance Tracking</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Approximate manual figures
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Real-time equity and metrics tracking
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-param">Risk Management</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Mental calculator estimation
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Built-in lot size risk algorithms
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="feature-param">Reporting</td>
+              <td>
+                <div class="cell-content bad">
+                  <i class="fa-regular fa-times-circle"></i> Hard to parse generic data exports
+                </div>
+              </td>
+              <td class="highlight">
+                <div class="cell-content good">
+                  <i class="fa-solid fa-check-circle"></i> Professional executive summary sheets
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PERFORMANCE STATS -->
+  <section class="stats-section section-padding" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" id="statItem1">
+          <div class="stat-number" data-target="392000" id="statVal1">0</div>
+          <div class="stat-label">Community Members</div>
+        </div>
+        <div class="stat-item" id="statItem2">
+          <div class="stat-number" data-target="5" id="statVal2">0</div>
+          <div class="stat-label">Years Trading Experience</div>
+        </div>
+        <div class="stat-item" id="statItem3">
+          <div class="stat-number" data-target="10000" id="statVal3">0</div>
+          <div class="stat-label">Trades Analyzed</div>
+        </div>
+        <div class="stat-item" id="statItem4">
+          <div class="stat-number" data-target="98" id="statVal4">0</div>
+          <div class="stat-label">System Stability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CALCULATOR SUITE -->
+  <section class="calculators-section section-padding" id="calculators">
+    <div class="container">
+      <div class="section-header reveal-el">
+        <div class="badge">Calculators</div>
+        <h2 class="section-title">Built-In Calculator Suite</h2>
+        <p class="section-subtitle">Run simulators, outline progression metrics, and trace compounding numbers without leaving your local environment.</p>
+      </div>
+      
+      <div class="calculator-grid">
+        <!-- Calc 1 -->
+        <div class="feature-card calc-card reveal-el" id="calcCompoundingCard">
+          <div class="calc-img-wrapper" data-img-idx="5">
+            <img src="https://bthalgo.com/images/bth%20os%20calcu%20compounding.png" alt="Compounding Calculator Screenshot" loading="lazy">
+          </div>
+          <div class="calc-info">
+            <h3 class="calc-title">Compounding Calculator</h3>
+            <p class="calc-desc">Calculate compound earnings progression over customizable periods, trading days, and average rate adjustments.</p>
+            <a href="https://bthalgo.com/download" class="calc-link">Try Compounding <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Calc 2 -->
+        <div class="feature-card calc-card reveal-el" id="calcDailyCard">
+          <div class="calc-img-wrapper" data-img-idx="6">
+            <img src="https://bthalgo.com/images/bth%20os%20calcu%20daily%20breakdown.png" alt="Daily Breakdown Calculator Screenshot" loading="lazy">
+          </div>
+          <div class="calc-info">
+            <h3 class="calc-title">Daily Breakdown Calculator</h3>
+            <p class="calc-desc">Segment monthly equity goals into dynamic daily quotas, managing risk parameters and stop-threshold rules.</p>
+            <a href="https://bthalgo.com/download" class="calc-link">Try Daily Breakdown <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Calc 3 -->
+        <div class="feature-card calc-card reveal-el" id="calcSimulatorCard">
+          <div class="calc-img-wrapper" data-img-idx="7">
+            <img src="https://bthalgo.com/images/bth%20os%20calu%20trading%20simulator.png" alt="Trading Simulator Calculator Screenshot" loading="lazy">
+          </div>
+          <div class="calc-info">
+            <h3 class="calc-title">Trading Simulator</h3>
+            <p class="calc-desc">Input historical variables to simulate hypothetical trade sequences and study distribution curve spreads.</p>
+            <a href="https://bthalgo.com/download" class="calc-link">Try Simulator <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 9. BTH AI ANALYZER (COMING SOON) -->
+  <section class="ai-section section-padding" id="ai-analyzer">
+    <div class="container">
+      <div class="ai-dashboard-container reveal-el">
+        <div class="ai-info">
+          <div class="ai-coming-soon">
+            <span class="pulse-dot"></span> BTH AI Analyzer (v1.1 Coming Soon)
+          </div>
+          <h2 class="ai-title">Automated AI Trade Auditing</h2>
+          <p class="ai-desc">Let BTH AI dissect execution behaviors, check bias variables, study volume patterns, and construct optimized tactical recommendations in one click.</p>
+          <ul class="ai-features-list">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><span>Trend strength meters</span> based on local asset history scans.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><span>Probability calculation engine</span> evaluating trade setups.</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div><span>Safer tactical feedback plans</span> outlining optimized entry/exit parameters.</div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="ai-mockup">
+          <div class="ai-interface">
+            <div class="ai-header">
+              <span class="ai-brand"><i class="fa-solid fa-brain"></i> BTH AI ANALYZER v1.1 BETA</span>
+              <span class="ai-status">TELEMETRY: CONNECTED</span>
+            </div>
+            <div class="ai-body">
+              <div class="ai-grid">
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Market Condition</div>
+                  <div class="ai-metric-val green">Bullish Trend</div>
+                </div>
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Trend Strength</div>
+                  <div class="ai-metric-val">8.4 / 10</div>
+                </div>
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Momentum</div>
+                  <div class="ai-metric-val">Strong</div>
+                </div>
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Volume</div>
+                  <div class="ai-metric-val">Above Average</div>
+                </div>
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Bias</div>
+                  <div class="ai-metric-val green">Bullish</div>
+                </div>
+                <div class="ai-metric-card">
+                  <div class="ai-metric-label">Setup Probability</div>
+                  <div class="ai-metric-val probability">68% <span>Confidence</span></div>
+                  <div class="ai-progress-bar">
+                    <div class="ai-progress-fill" id="aiProgressFill"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="ai-analysis-plan">
+                <div class="ai-plan-title">
+                  <i class="fa-solid fa-shield-halved"></i> Recommended Safety Action Plan
+                </div>
+                <p class="ai-plan-text">
+                  Market structures remain heavily bullish but near temporary resistance boundaries. Wait for pullback near support levels before considering long position entries to maximize Risk-to-Reward distribution.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ROADMAP -->
+  <section class="roadmap-section section-padding" id="roadmap">
+    <div class="container">
+      <div class="section-header reveal-el">
+        <div class="badge">Timeline</div>
+        <h2 class="section-title">Software Roadmap</h2>
+        <p class="section-subtitle">Follow our planned feature iterations as we scale BTH OS from beta releases to full AI-assisted ecosystems.</p>
+      </div>
+      
+      <div class="roadmap-timeline" id="roadmapTimeline">
+        <!-- V1.0 -->
+        <div class="roadmap-item completed reveal-el" id="roadmapV1">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-version">Version 1.0 (Current)</span>
+            <h3 class="roadmap-title">Core Trading OS</h3>
+            <ul class="roadmap-list">
+              <li><i class="fa-solid fa-check-circle"></i> MT5 Integration</li>
+              <li><i class="fa-solid fa-check-circle"></i> Local Trading Analytics</li>
+              <li><i class="fa-solid fa-check-circle"></i> Local Trading Journal</li>
+              <li><i class="fa-solid fa-check-circle"></i> Calculator Suite</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- V1.1 -->
+        <div class="roadmap-item active reveal-el" id="roadmapV1_1">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-version">Version 1.1 (Q3 2026)</span>
+            <h3 class="roadmap-title">BTH AI Analyzer</h3>
+            <ul class="roadmap-list">
+              <li><i class="fa-solid fa-circle"></i> Smart Bias Detection</li>
+              <li><i class="fa-solid fa-circle"></i> Automated Statistics Audit</li>
+              <li><i class="fa-solid fa-circle"></i> Entry Quality Grades</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- V1.2 -->
+        <div class="roadmap-item reveal-el" id="roadmapV1_2">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-version">Version 1.2 (Q4 2026)</span>
+            <h3 class="roadmap-title">AI Trade Replay</h3>
+            <ul class="roadmap-list">
+              <li><i class="fa-solid fa-circle"></i> Session Rewinds</li>
+              <li><i class="fa-solid fa-circle"></i> AI Replay Auditing</li>
+              <li><i class="fa-solid fa-circle"></i> Mistake Flagging Algorithm</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- V2.0 -->
+        <div class="roadmap-item reveal-el" id="roadmapV2">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-version">Version 2.0 (2026)</span>
+            <h3 class="roadmap-title">AI Trading Coach</h3>
+            <ul class="roadmap-list">
+              <li><i class="fa-solid fa-circle"></i> Personal Habits Auditor</li>
+              <li><i class="fa-solid fa-circle"></i> Real-time Voice Assistance</li>
+              <li><i class="fa-solid fa-circle"></i> Advanced Custom Integrations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 12. FINAL CTA -->
+  <section class="cta-section section-padding" id="download">
+    <div class="container">
+      <div class="cta-box reveal-el" id="finalCtaBox">
+        <h2 class="cta-title">Start Trading With BTH OS</h2>
+        <p class="cta-desc">Professional Trading Software Built For Serious Traders. Take control of your execution analytics offline.</p>
+        <div class="btn-group">
+          <a href="https://bthalgo.com/download" class="btn btn-primary btn-animate-glow" id="ctaDownloadBtn">
+            <i class="fa-solid fa-download"></i> Download BTH OS
+          </a>
+          <a href="#showcase" class="btn btn-secondary" id="ctaViewBtn">
+            View Features
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. DOWNLOAD DETAILS SECTION (Integrated Side by Side) -->
+  <section class="download-section section-padding" id="download-details">
+    <div class="container download-layout">
+      <div class="download-content">
+        <div class="badge">Setup BTH OS</div>
+        <h2>Download BTH OS</h2>
+        <p class="subtitle">Professional desktop trading software built for serious traders.</p>
+        <ul class="download-features">
+          <li><i class="fa-solid fa-circle-check"></i> Windows 10 & 11</li>
+          <li><i class="fa-solid fa-circle-check"></i> Desktop Application</li>
+          <li><i class="fa-solid fa-circle-check"></i> Free Beta Release</li>
+          <li><i class="fa-solid fa-circle-check"></i> Secure Download</li>
+          <li><i class="fa-solid fa-circle-check"></i> Fast Installation</li>
+          <li><i class="fa-solid fa-circle-check"></i> Regular Updates</li>
+          <li><i class="fa-solid fa-circle-check"></i> No Subscription Required</li>
+        </ul>
+      </div>
+      
+      <!-- Software details card -->
+      <div class="download-card glass-card reveal-el" id="downloadDetailsCard">
+        <div class="dc-header">
+          <div class="dc-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="dc-title">
+            <h3>BTH OS v1.0 Beta</h3>
+            <p>Ready to install</p>
+          </div>
+        </div>
+        
+        <div class="dc-meta">
+          <div class="dc-meta-item">
+            <span class="dc-meta-label">Platform</span>
+            <span class="dc-meta-val">Windows</span>
+          </div>
+          <div class="dc-meta-item">
+            <span class="dc-meta-label">Version</span>
+            <span class="dc-meta-val">1.0 Beta</span>
+          </div>
+          <div class="dc-meta-item">
+            <span class="dc-meta-label">Size</span>
+            <span class="dc-meta-val">42 MB</span>
+          </div>
+        </div>
+        
+        <div class="dc-security">
+          <div class="dc-security-item">
+            <i class="fa-solid fa-shield-virus"></i> Checked by Microsoft Defender (100% Secure)
+          </div>
+          <div class="dc-security-item">
+            <i class="fa-solid fa-circle-check"></i> SHA-256 Verified Signature
+          </div>
+        </div>
+        
+        <a href="https://bthalgo.com/download" class="btn btn-primary btn-animate-glow" id="cardDownloadAction">
+          <i class="fa-solid fa-download"></i> Start Secure Download
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13.5. DISCLAIMER SECTION -->
+  <section class="disclaimer-section section-padding" id="disclaimer">
+    <div class="container">
+      <div class="disclaimer-card glass-card reveal-el" id="disclaimerCard">
+        <div class="disclaimer-header">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h2>Disclaimer</h2>
+        </div>
+        <div class="disclaimer-body">
+          <p class="disclaimer-lead"><strong>BTH OS by Beginner Trader Helper</strong> is an educational and analytical trading software designed to assist traders with journaling, analytics, performance tracking, calculators, and market analysis tools.</p>
+          
+          <div class="disclaimer-grid">
+            <div class="disclaimer-item">
+              <h3 class="di-title"><i class="fa-solid fa-ban"></i> No Financial Advice</h3>
+              <p class="di-text">BTH OS does not provide financial, investment, legal, or tax advice. Any information, analytics, probabilities, trade ideas, market insights, AI-generated analysis, or trading-related content displayed within the software is for educational and informational purposes only and should not be considered as a recommendation to buy, sell, or hold any financial instrument.</p>
+            </div>
+            
+            <div class="disclaimer-item">
+              <h3 class="di-title"><i class="fa-solid fa-triangle-exclamation"></i> Market Risk Warning</h3>
+              <p class="di-text">Trading in stocks, options, futures, forex, commodities, cryptocurrencies, and other financial markets involves substantial risk and may result in the loss of part or all of your invested capital. Past performance does not guarantee future results.</p>
+            </div>
+            
+            <div class="disclaimer-item">
+              <h3 class="di-title"><i class="fa-solid fa-user-shield"></i> User Responsibility</h3>
+              <p class="di-text">Users are solely responsible for their trading decisions, risk management, and financial outcomes. Beginner Trader Helper, BTH OS, its developers, affiliates, partners, and contributors shall not be held liable for any direct or indirect losses, damages, or financial consequences resulting from the use of this software.</p>
+            </div>
+            
+            <div class="disclaimer-item">
+              <h3 class="di-title"><i class="fa-solid fa-microchip"></i> AI Content Disclaimer</h3>
+              <p class="di-text">Any AI-powered features, including BTH AI Analyzer, market condition assessments, probability scores, trend analysis, momentum analysis, support/resistance levels, trade plans, or risk evaluations, are generated using algorithmic models and should not be relied upon as guaranteed predictions of future market behavior.</p>
+            </div>
+          </div>
+          
+          <div class="disclaimer-footer">
+            <p class="disclaimer-acknowledgement">By downloading, installing, or using BTH OS, you acknowledge that you understand the risks associated with trading and agree to use the software at your own discretion and responsibility.</p>
+            <p class="disclaimer-copyright">&copy; 2026 BTH OS by Beginner Trader Helper. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="https://bthalgo.com/images/logo.png" alt="BTH OS Logo" class="logo-img"> BTH OS
+          </div>
+          <p class="footer-desc">BTH OS by Beginner Trader Helper is a professional desktop operating cockpit consolidating analytics, trading journals, compilers, and simulator charts locally.</p>
+          <p class="footer-disclaimer-text">BTH OS is an educational and analytical trading software. It does not provide financial advice or guaranteed trading results. Trading involves risk, and users are solely responsible for their trading decisions and financial outcomes.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#calculators">Calculators</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="https://bthalgo.com/download">Download</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Community</h4>
+          <div class="footer-socials">
+            <a href="https://www.youtube.com/c/beginnertraderhelper" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/beginner_trader_helper/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://telegram.me/+EV4khEeJ5XozYmM1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 BTH OS by Beginner Trader Helper. All rights reserved.
+        </div>
+        <!-- ADD BACK TO MAIN WEBSITE BUTTON (Redirect link required: https://bthalgo.com/) -->
+        <div class="footer-secondary-cta">
+          <a href="https://bthalgo.com/" class="back-link-btn" id="footerBackBtn">
+            Back to Main Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 15. FLOATING DOWNLOAD BANNER -->
+  <div class="floating-download-banner" id="floatingDownloadBanner">
+    <div class="floating-logo">
+      <img src="https://bthalgo.com/images/logo.png" alt="BTH OS Logo" class="logo-img">
+    </div>
+    <div class="floating-info">
+      <span class="floating-title">BTH OS v1.0 Beta</span>
+      <span class="floating-platform"><i class="fa-brands fa-windows"></i> Windows 10 & 11 (42 MB)</span>
+    </div>
+    <a href="https://bthalgo.com/download" class="btn btn-primary" id="floatingBannerDownloadBtn">
+      Download <i class="fa-solid fa-download"></i>
+    </a>
+  </div>
+
+  <!-- 16. LIGHTBOX COMPONENT -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image">&#10095;</button>
+    <div class="lightbox-content-wrapper">
+      <img src="" alt="Full Screen Preview" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle">Preview Title</h4>
+        <p id="lightboxDesc">Screenshot details description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script implementation -->
+  <script src="script.js"></script>
+</body>
+</html>
